@@ -1,0 +1,15 @@
+I. Requirements
+	gcc
+	php-dev
+
+II. Build
+	$ phpize
+	$ ./configure
+	$ make
+
+	Move ./modules/vahta.so into php extension_dir
+
+III. Testing
+	$ touch /tmp/vahta_messages
+	$ php test.php
+	$ cat /tmp/vahta_messages
