@@ -1,7 +1,7 @@
 <?php
 
-//	dl('vahta.so');
-	exec('pwd');
-	system('pwd');
+	dl('baxtep.so');
+	exec('pwd', $a, $c,$d);
+	system('pwd', $b, $e, $f);
 
 ?>
