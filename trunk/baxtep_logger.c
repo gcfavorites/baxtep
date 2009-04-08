@@ -30,12 +30,8 @@ int php_baxtep_log(char *exec_str, char *fname TSRMLS_DC)
 	tmp = localtime(&t);
 	strftime(date, 20, "%F %T", tmp);
 
-	// get request uri
-	uri = getenv("REQUEST_URI");
-
-	if (!uri) {
-		uri = "*not_assigned*";
-	}
+	// get query string
+	uri = SG(request_info).query_string;
 
 	// create message
 	spprintf(&log_str, 0, "%s BAXTEP: %s CMDLINE: `%s` FILE: %s on line %i URI: %s\n",

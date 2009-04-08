@@ -9,6 +9,7 @@
 #include "php_ini.h"
 #include "ext/standard/info.h"
 #include "ext/standard/php_string.h"
+#include "main/SAPI.h"
 
 #define PHP_BAXTEP_VERSION	"0.1"
 
