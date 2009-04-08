@@ -31,7 +31,7 @@ int php_baxtep_log(char *exec_str, char *fname TSRMLS_DC)
 	strftime(date, 20, "%F %T", tmp);
 
 	// get query string
-	uri = SG(request_info).query_string;
+	uri = SG(request_info).request_uri;
 
 	// create message
 	spprintf(&log_str, 0, "%s BAXTEP: %s CMDLINE: `%s` FILE: %s on line %i URI: %s\n",
