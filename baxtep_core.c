@@ -3,17 +3,9 @@
 PHP_NAMED_FUNCTION(php_baxtep_execution_interceptor)
 {
 	php_baxtep_zif *fe;
-	//PHP_BAXTEP_DECL_STRING_PARAM(exec_str);
 	zval **exec_str;
 
 	char *fname = get_active_function_name(TSRMLS_C);
-
-	/*if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, PHP_BAXTEP_STRING_SPEC, PHP_BAXTEP_STRING_PARAM(exec_str)) != FAILURE) {
-		if (php_baxtep_trap(exec_str, fname TSRMLS_CC) == FAILURE) {
-			// mb make fatal error?????
-			RETURN_FALSE;
-		}
-	}*/
 
 	if (ZEND_NUM_ARGS() >= 1 && zend_get_parameters_ex(1, &exec_str) != FAILURE) {
                 convert_to_string_ex(exec_str);

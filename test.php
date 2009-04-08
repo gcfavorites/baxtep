@@ -1,7 +1,7 @@
 <?php
-
+var_dump($_SERVER);
 	dl('baxtep.so');
-	exec('pwd', $a, $c,$d);
-	system('pwd', $b, $e, $f);
+	exec('pwd');
+	system('pwd');
 
 ?>
