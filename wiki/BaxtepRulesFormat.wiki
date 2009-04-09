@@ -8,4 +8,9 @@ I.e:
 {{{
 allow ^myapp /[\w/]+$ [L]
 }}}
+
+Possible options:
+ * L - log this match
+ * i - case insensitive match
+
 ...TO BE CONTINUED
