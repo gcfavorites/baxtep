@@ -1,0 +1,11 @@
+#summary Page describes format of baxtep rules
+
+= Format #1  =
+
+_Action _regular_expression [_additional_options]
+
+I.e
+
+Allow ^myapp /[\w/]+$ [L]
+
+...TO BE CONTINUED
