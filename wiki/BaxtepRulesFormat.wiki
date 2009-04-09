@@ -2,10 +2,10 @@
 
 = Format #1  =
 
-_Action _regular_expression [_additional_options]
+_Action_ _regular_expression_ `[`_additional_options_`]`
 
 I.e
 
-Allow ^myapp /[\w/]+$ [L]
+Allow ^myapp /`[`\w/`]`+$ `[`L`]`
 
 ...TO BE CONTINUED
