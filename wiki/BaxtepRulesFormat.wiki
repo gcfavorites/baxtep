@@ -6,6 +6,6 @@
 
 I.e:
 {{{
-Allow ^myapp /[\w/]+$ [L]
+allow ^myapp /[\w/]+$ [L]
 }}}
 ...TO BE CONTINUED
