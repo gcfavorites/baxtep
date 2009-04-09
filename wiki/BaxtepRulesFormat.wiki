@@ -2,10 +2,10 @@
 
 = Format #1  =
 
-_Action_ _regular_expression_ `[`_additional_options_`]`
+*allow|deny* _regular_expression_ `[`_additional_options_`]`
 
-I.e
-
+I.e:
+{{{
 Allow ^myapp /`[`\w/`]`+$ `[`L`]`
-
+}}}
 ...TO BE CONTINUED
