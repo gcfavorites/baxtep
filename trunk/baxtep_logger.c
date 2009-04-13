@@ -21,7 +21,8 @@ int php_baxtep_log(char *exec_str, char *fname TSRMLS_DC)
 {
 	char *log_str;
 	char *date = (char *) emalloc(20);
-	char *uri;
+	char *uri = NULL;
+    zval **data;
 	time_t t;
 	struct tm *tmp;
 
@@ -30,8 +31,12 @@ int php_baxtep_log(char *exec_str, char *fname TSRMLS_DC)
 	tmp = localtime(&t);
 	strftime(date, 20, "%F %T", tmp);
 
-	// get query string
-	uri = SG(request_info).request_uri;
+	// get request uri
+    if (PG(http_globals)[TRACK_VARS_SERVER] &&
+			zend_hash_find(Z_ARRVAL_P(PG(http_globals)[TRACK_VARS_SERVER]), "REQUEST_URI",
+				sizeof("REQUEST_URI"), (void **) &data) == SUCCESS) {
+        uri = Z_STRVAL_PP(data);
+    }
 
 	// create message
 	spprintf(&log_str, 0, "%s BAXTEP: %s CMDLINE: `%s` FILE: %s on line %i URI: %s\n",
